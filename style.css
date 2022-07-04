@@ -1,5 +1,6 @@
 :root {
     --bg-img: url("./images/7 street background.png");
+    --invalid-highlight: rgb(225, 85, 85);
 }
 
 body {
@@ -45,7 +46,7 @@ body {
 }
 
 .first-section div, .second-section div {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .first-section :first-child, .second-section :first-child {
@@ -75,6 +76,8 @@ input {
     display: block;
     font-size: 10px;
     width: 100%;
+    border-color: transparent;
+    border-radius: 3px;
 }
 
 .title-container * {
@@ -101,3 +104,13 @@ button {
     color: black;
     font-weight: bold;
 }
+
+div .invalid-alert {
+    box-sizing: border-box;
+    display: block;
+    margin-top: 0;
+    color: rgb(225, 85, 85);
+    font-size: 12px;
+    height: 15px;
+}
+

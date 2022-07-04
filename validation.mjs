@@ -39,7 +39,9 @@ function inputValidator(formElement){
 
     return { 
         valid: validCollection, 
-        invalid: invalidCollection };    
+        invalid: invalidCollection,
+        proceedForm: Object.keys(invalidCollection).length == 0 ? true : false
+     };    
 }
 
 function acceptedInputs(input, typeOfInput, accumulator){
@@ -85,4 +87,8 @@ function invalidInputs(input, typeOfInput, accumulator){
     }
 }
 
-export {inputValidator};
+function applyInvalidMessage(result, elements){
+    console.log(elements);
+}
+
+export {inputValidator, applyInvalidMessage };
