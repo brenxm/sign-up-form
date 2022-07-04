@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
+    <script src="./script.js" type="module" defer></script>
     <title>7street sign-up form</title>
 </head>
 
@@ -27,30 +27,29 @@
             <div class="first-section">
 
                 <div>
-                    <label for="first-name">First Name</label>
+                    <label for="first-name">First Name*</label>
                     <input type="text" name="first-name" placeholder="Jackie">
                 </div>
                 <div>
-                    <label for="phone-number">Phone Number</label>
-                    <input type="text" name="phone-number" placeholder="(713) 999-999"
-                        pattern="[(]\d{3}[)][\s-]?\d{3}[\s-]d\{4}">
+                    <label for="phone-number">Phone Number*</label>
+                    <input type="text" name="phone-number" placeholder="(713) 999-999" pattern="[(]\d{3}[)][\s-]?\d{3}[\s-]\d{4}|\d{3}[\s-]\d{3}[\s-]\d{4}">
                 </div>
                 <div>
-                    <label for="password">Password</label>
-                    <input type="text" name="password" required>
+                    <label for="password">Password*</label>
+                    <input type="text" name="password">
                 </div>
             </div>
             <div class="second-section">
                 <div>
-                    <label for="last-name">Last Name</label>
+                    <label for="last-name">Last Name*</label>
                     <input type="text" name="last-name" placeholder="Venzon">
                 </div>
                 <div>
-                    <label for="email">Email</label>
+                    <label for="email">Email*</label>
                     <input type="email" name="email" placeholder="example@company.com">
                 </div>
                 <div>
-                    <label for="confirm-password">Confirm Passowrd</label>
+                    <label for="confirm-password">Confirm Passowrd*</label>
                     <input type="text" name="confirm-password">
                 </div>
             </div>

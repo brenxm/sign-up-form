@@ -1,7 +1,8 @@
-const form = document.getElementsByClassName('fieldset');
-const submitButton = document.querySelector('button');
+import { inputValidator } from "./validation.mjs";
 
-console.log('working');
+const form = document.querySelector('.fieldset');
+
 form.addEventListener('submit',(event)=>{
     event.preventDefault();
-    console.log('submitted')});
+    console.log(inputValidator(form));
+})
