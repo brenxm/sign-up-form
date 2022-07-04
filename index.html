@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>7street sign-up form</title>
+</head>
+
+<body>
+    <div class="left-section">
+        <div class="logo-container"></div>
+        <div class="title-container">
+            <div>7th STREET</div>
+            <div>STUDIO</div>
+        </div>
+    </div>
+    <div class="right-section">
+        <form action="people.json" method="get" class="fieldset">
+            <div>
+                <h1>Create your account</h1>
+
+            </div>
+            <div class="first-section">
+
+                <div>
+                    <label for="first-name">First Name</label>
+                    <input type="text" name="first-name" placeholder="Jackie">
+                </div>
+                <div>
+                    <label for="phone-number">Phone Number</label>
+                    <input type="text" name="phone-number" placeholder="(713) 999-999"
+                        pattern="[(]\d{3}[)][\s-]?\d{3}[\s-]d\{4}">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="text" name="password" required>
+                </div>
+            </div>
+            <div class="second-section">
+                <div>
+                    <label for="last-name">Last Name</label>
+                    <input type="text" name="last-name" placeholder="Venzon">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="example@company.com">
+                </div>
+                <div>
+                    <label for="confirm-password">Confirm Passowrd</label>
+                    <input type="text" name="confirm-password">
+                </div>
+            </div>
+            <div class="button-container">
+                <button type="submit">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

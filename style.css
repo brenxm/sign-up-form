@@ -1,0 +1,103 @@
+:root {
+    --bg-img: url("./images/7 street background.png");
+}
+
+body {
+    display: flex;
+    margin: 0;
+    overflow: none;
+}
+
+.left-section, .right-section {
+    display: inline-block;
+    height: 100vh;
+    background-image: var(--bg-img);
+    background-size: 250px;
+    flex: 1;
+}
+
+.left-section{
+    filter: invert();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fieldset {
+    height: 500px;
+    background-color: rgb(30, 40, 41);
+    border-radius: 20px;
+    margin: 0 50px;
+    box-shadow: 3px 3px 5px #ffffff31;
+    display: grid;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 30px;
+    top: calc(100vh / 2 - calc(500px / 2));
+    grid-template-rows: 25% auto 25%;
+    grid-template-columns: 1fr 1fr;
+    width: 500px;
+}
+
+.fieldset :first-child {
+    grid-row: 1;
+    grid-column: 1/3;
+}
+
+.first-section div, .second-section div {
+    margin-top: 40px;
+}
+
+.first-section :first-child, .second-section :first-child {
+    margin-top: 0;
+}
+
+h1 {
+    display: block;
+    color: rgb(255, 255, 255);
+    filter: none;
+    font-size: 45px;
+    text-align: center;
+}
+
+.fieldset > * {
+    padding: 20px 10px;
+    line-height: 20px;
+}
+
+label {
+    font-size: 15px;
+    color: white;
+    display: block;
+}
+
+input {
+    display: block;
+    font-size: 10px;
+    width: 100%;
+}
+
+.title-container * {
+    color: white; /*inverted*/
+    text-align: center;
+    font-size: 100px;
+}
+
+.title-container :last-child {
+    font-size: 60px;
+}
+
+.button-container {
+    grid-column: 1 / 3;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(28, 238, 217);
+    padding: 10px 15px;
+    border-radius: 10px;
+    border-style: none;
+    color: black;
+    font-weight: bold;
+}
