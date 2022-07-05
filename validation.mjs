@@ -116,8 +116,10 @@ function validateForm(inputs) {
 }
 
 function clearStyle(elem) {
+    const inputType = `#invalid-${elem.getAttribute('name')}`;
     elem.setAttribute('style', 'border: none');
-    document.querySelector(`#invalid-${elem.getAttribute('name')}`).textContent = "";
+    if (inputType == '#invalid-confirm-password') return;
+    document.querySelector(inputType).textContent = "";
 }
 
 function displayErrorMessage(inputType, message) {
