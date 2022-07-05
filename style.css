@@ -1,6 +1,7 @@
 :root {
     --bg-img: url("./images/7 street background.png");
     --invalid-highlight: rgb(225, 85, 85);
+    --valid-highlight: rgb(102, 255, 72);
 }
 
 body {
@@ -40,6 +41,10 @@ body {
     width: 500px;
 }
 
+div .first-section, div .second-section {
+    padding: 20px 0;
+}
+
 .fieldset :first-child {
     grid-row: 1;
     grid-column: 1/3;
@@ -47,6 +52,9 @@ body {
 
 .first-section div, .second-section div {
     margin-top: 30px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 85% 15%;
 }
 
 .first-section :first-child, .second-section :first-child {
@@ -58,7 +66,7 @@ h1 {
     color: rgb(255, 255, 255);
     filter: none;
     font-size: 45px;
-    text-align: center;
+    text-align: zcenter;
 }
 
 .fieldset > * {
@@ -67,15 +75,17 @@ h1 {
 }
 
 label {
+    
     font-size: 15px;
     color: white;
     display: block;
+    width: 100%;
 }
 
 input {
-    display: block;
+    display: inline;
     font-size: 10px;
-    width: 100%;
+    width: 175px;
     border-color: transparent;
     border-radius: 3px;
 }
@@ -113,4 +123,15 @@ div .invalid-alert {
     font-size: 12px;
     height: 15px;
 }
+
+div .green-check {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    height: 17px; 
+    width: 17px;
+
+}
+
+
 
