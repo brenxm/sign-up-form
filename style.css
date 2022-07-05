@@ -130,7 +130,10 @@ div .green-check {
     margin: 0;
     height: 17px; 
     width: 17px;
+}
 
+svg {
+    display: none;
 }
 
 

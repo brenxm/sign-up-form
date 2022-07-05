@@ -1,38 +1,30 @@
-import { inputValidator } from "./validation.mjs";
+import { isValidInput, focusInputValidator, validateForm, clearStyle } from "./validation.mjs";
 
 const form = document.querySelector('.fieldset');
-const invalidTextElem = document.querySelectorAll('.invalid-alert');
+const inputs = document.querySelectorAll('input');
+
+
+inputs.forEach(input => {
+    input.addEventListener('input', (e)=>{
+        focusInputValidator(e.target, isValidInput(e.target))
+    })
+});
+
+inputs.forEach(input => {
+    input.addEventListener('click', (e) => {
+        clearStyle(e.target);
+    })
+});
 
 form.addEventListener('submit',(event)=>{
     event.preventDefault();
-    const inputResult = inputValidator(form);
-    const validForm = Object.values(inputResult).every(obj => obj.valid == true);
-    console.log(inputResult);
-    if (validForm) sendForm();
-    else invalidForm(inputResult);
+    validateForm(inputs) ? sendForm() : null;
 });
 
+
 function sendForm(){
-    alert('Account succesfully created!, well not really but you made it');
+    alert('All given info accepted, thanks for pretending to apply!');
 }
 
-function invalidForm(inputResult){
-    //get element of input and set red if invalid
-    //get text alert and set current text to current value
-    const arr = Object.entries(inputResult);
 
-    arr.map((arri)=>{
-        const input = document.querySelector(`#input-${arri[0]}`);
-        const textAlert = document.querySelector(`#invalid-${arri[0]}`);
-
-        if(arri[1].valid){
-            input.setAttribute('style','border: 2px solid var(--valid-highlight)');
-            textAlert.textContent = "";
-        }
-        else {
-            input.setAttribute('style', 'border: 2px solid var(--invalid-highlight)');
-            textAlert.textContent = arri[1].value;
-        }
-    });
-}
 
